@@ -16,6 +16,7 @@
 
 .articleImage {
     flex: 0 0 30%;
+    margin-right: 1.5vw;
     /* Adjust the width of the image container as needed */
 }
 
@@ -29,12 +30,12 @@
 }
 
 .newsPageTitle {
-    color: #0047ab; /* Marine green */
+    color: #0047ab; 
 }
 
-.articleDetails h3 {
-    margin-top: 0;
-    color: #0a336d; /* Dodger blue */
+.articleDetails h4 {
+    margin-top: 3vh;
+    color: #0a336d; 
 }
 
 .author {

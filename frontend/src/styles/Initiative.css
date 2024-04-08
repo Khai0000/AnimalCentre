@@ -1,0 +1,29 @@
+.currentIssuesContainer {
+    display: flex;
+    max-width: 90vw;
+    overflow-x: auto; 
+}
+
+.currentIssuesContainer::-webkit-scrollbar {
+    height: 0.5vh;
+}
+
+.currentIssuesContainer::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.currentIssuesContainer::-webkit-scrollbar-thumb {
+    background-color: #0047ab;
+    border-radius: 20px;
+}
+
+.currentIssuesContainer::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
+
+.currentIssueTitle{
+    color: #0047ab;
+    font-weight: bold;
+    margin: 0;
+}

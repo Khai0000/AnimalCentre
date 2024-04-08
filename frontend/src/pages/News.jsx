@@ -50,7 +50,7 @@ const News = () => {
               <img src={article.urlToImage} alt="Article" />
             </div>
             <div className="articleDetails">
-              <h3>{article.title}</h3>
+              <h4>{article.title}</h4>
               <p className="author">{article.author}</p>
               <p className="description">{article.description}</p>
             </div>

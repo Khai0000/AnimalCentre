@@ -44,7 +44,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="plasticPollutionContainer p-5 d-flex">
+      <div className="plasticPollutionContainer p-5 d-flex mb-0">
         <div className="container plasticPollutionContentContainer py-5  d-flex">
           <h2 className="plasticPollutionTitle">Why It is Important</h2>
           <p className="col-lg-11 lead plasticPollutionContent">
