@@ -1,0 +1,48 @@
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article {
+    display: flex;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.article-image {
+    flex: 0 0 30%;
+    /* Adjust the width of the image container as needed */
+}
+
+.article-image img {
+    width: 100%;
+}
+
+.article-details {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.newsPageTitle{
+    color: black;
+}
+
+.article-details h3 {
+    margin-top: 0;
+    color: #008455;
+}
+
+.author {
+    font-style: italic;
+    color: black;
+}
+
+.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    color: black;
+}
