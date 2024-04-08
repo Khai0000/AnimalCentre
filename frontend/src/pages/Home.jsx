@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 import organizationPhoto from "../assets/images/marine_organization.jpg";
+import plasticPollutionPhoto from '../assets/images/plastic_pollution_background.jpg'
 
 const Home = () => {
   return (
@@ -46,7 +47,7 @@ const Home = () => {
       <div className="plasticPollutionContainer p-5 d-flex">
         <div className="container plasticPollutionContentContainer py-5  d-flex">
           <h2 className="plasticPollutionTitle">Why It is Important</h2>
-          <p className="col-lg-12 lead plasticPollutionContent">
+          <p className="col-lg-11 lead plasticPollutionContent">
             Plastic pollution poses a significant danger to marine animals and
             the health of our oceans.
             <br />
@@ -66,7 +67,7 @@ const Home = () => {
           </p>
         </div>
         <img
-          src={organizationPhoto}
+          src={plasticPollutionPhoto}
           alt="organization"
           className="plasticPollutionPhoto"
         />

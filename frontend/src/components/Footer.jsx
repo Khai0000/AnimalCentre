@@ -31,8 +31,8 @@ function Footer() {
       </div>
 
       <p>
-        <i>AniMall @Copyright</i>2024. All rights reserved. Powered by
-        CHINGCHONG.{" "}
+        <i>AnimalCentre @Copyright</i>2024. All rights reserved. Powered by
+        Gin Khai.{" "}
       </p>
     </footer>
   );

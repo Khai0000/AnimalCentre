@@ -62,7 +62,7 @@
 }
 
 .aboutUsContainer .aboutUsTitle,.plasticPollutionTitle{
-    color: #008455;
+    color: #0047ab; 
     text-align: start;
 }
 
@@ -72,12 +72,9 @@
 
 
 .plasticPollutionTitle{
-    color: #008455;
+    color: #0047ab; 
 }
 
 .plasticPollutionContent{
     color: rgb(124, 118, 118);
-}
-
-.plasticPollutionPhoto{
 }

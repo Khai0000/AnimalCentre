@@ -1,6 +1,10 @@
+.header{
+    align-items: center;
+}
+
 .nav-link {
     position: relative;
-    color: #008455;
+    color: #0047ab;
     text-decoration: none;
 }
 
@@ -11,7 +15,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #008455;
+    background-color: #0047ab; 
     transition: width 0.3s ease;
 }
 
@@ -20,15 +24,15 @@
 }
 
 .nav-link:hover {
-    color: #008455;
+    color: #0047ab; 
 }
 
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    background-color: #008455;
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #0047ab; 
     color: #fff;
 }
 
-.nav-link:focus{
-    color: #008455;
+.nav-link:focus {
+    color: #0047ab; 
 }

@@ -92,14 +92,14 @@ footer .ratingButtonContainer button:nth-child(3) {
 
 /* Styling for button 4 */
 footer .ratingButtonContainer button:nth-child(4) {
-    background-color: #12543d;
+    background-color: #0a336d;
     color: white;
     /* Adjust text color as needed */
 }
 
 /* Styling for button 5 */
 footer .ratingButtonContainer button:nth-child(5) {
-    background-color: #008455;
+    background-color: #0047ab;
     color: #fff;
     /* Adjust text color as needed */
 }
@@ -111,7 +111,7 @@ footer .ratingButtonContainer button:not(:last-child) {
 
 footer .submitButton {
     color: white;
-    background-color: #008455;
+    background-color: #0047ab;
     border: none;
     border-radius: 20px;
     min-width: 15%;
@@ -136,7 +136,7 @@ footer p {
 }
 
 .textArea::-webkit-scrollbar-thumb {
-    background-color: #008455;
+    background-color: #0047ab;
     border-radius: 20px;
 }
 

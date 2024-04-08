@@ -1,6 +1,11 @@
-.articles-container {
+.articlesContainer {
     display: flex;
     flex-wrap: wrap;
+}
+
+.newsPageContainer a {
+    margin: 2vh 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Add the box-shadow */
 }
 
 .article {
@@ -9,32 +14,32 @@
     text-decoration: none;
 }
 
-.article-image {
+.articleImage {
     flex: 0 0 30%;
     /* Adjust the width of the image container as needed */
 }
 
-.article-image img {
+.articleImage img {
     width: 100%;
 }
 
-.article-details {
+.articleDetails {
     flex: 1;
     padding-left: 10px;
 }
 
-.newsPageTitle{
-    color: black;
+.newsPageTitle {
+    color: #0047ab; /* Marine green */
 }
 
-.article-details h3 {
+.articleDetails h3 {
     margin-top: 0;
-    color: #008455;
+    color: #0a336d; /* Dodger blue */
 }
 
 .author {
     font-style: italic;
-    color: black;
+    color: #333; /* Dark grey */
 }
 
 .description {
@@ -44,5 +49,23 @@
     -webkit-line-clamp: 2;
     /* Limit to 2 lines */
     -webkit-box-orient: vertical;
-    color: black;
+    color: #333; /* Dark grey */
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+}
+
+.loadingContainer .css-18lrjg1-MuiCircularProgress-root {
+    color: #0047ab; /* Dodger blue */
+}
+
+.loadingContainer p {
+    color: #0047ab; /* Dodger blue */
+    font-size: 3rem;
+    margin: 0;
 }
