@@ -1,47 +1,54 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/images/AnimalCENTRE.svg";
-import '../styles/Header.css';
+import "../styles/Header.css";
 
 export const Header = () => {
   return (
     <header>
-      <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+      <div className="container">
+        <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <NavLink
+            to="/"
+            className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
           >
-            <img src={logo} class="bi me-2" width="70" height="60"  />
-            <span class="fs-4" style={{ fontWeight: "bold" }}>
+            <img
+              src={logo}
+              className="bi me-2"
+              width="70"
+              height="60"
+              alt="Logo"
+            />
+            <span className="fs-4" style={{ fontWeight: "bold" }}>
               AnimalCentre
             </span>
-          </a>
+          </NavLink>
 
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">
+          <ul className="nav nav-pills">
+            <li className="nav-item">
+              <NavLink to="/" className="nav-link" activeClassName="active">
                 Home
-              </a>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Features
-              </a>
+            <li className="nav-item">
+              <NavLink to="news" className="nav-link">
+                News
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Pricing
-              </a>
+            <li className="nav-item">
+              <NavLink to="initiative" className="nav-link">
+                Initiative
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
+            <li className="nav-item">
+              <NavLink to="initiative" className="nav-link">
                 FAQs
-              </a>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
+            <li className="nav-item">
+              <NavLink to="initiative" className="nav-link">
                 About
-              </a>
+              </NavLink>
             </li>
           </ul>
         </header>
