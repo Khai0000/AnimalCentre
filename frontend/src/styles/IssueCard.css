@@ -1,7 +1,6 @@
 .issueCardContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 2rem;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Add the box-shadow */
     min-width: 20vw;
@@ -21,6 +20,7 @@
 .issueCardContainer h4{
     color: #0047ab;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .issueCardContainer p{
@@ -28,5 +28,6 @@
     line-height: 1.6;
     font-size: 1rem;
     text-align: center;
+    word-wrap: break-word;
 }
 
