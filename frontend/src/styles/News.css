@@ -31,6 +31,9 @@
 
 .newsPageTitle {
     color: #0047ab; 
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2vh;
 }
 
 .articleDetails h4 {

@@ -1,0 +1,45 @@
+.eventPage{
+    margin-bottom: 5vh;
+}
+
+.pageTitle {
+    margin-bottom: 2rem;
+    color: #0047ab;
+    font-weight: bold;
+    text-align: center;
+}
+
+.eventsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2vw;
+}
+
+@media (min-width: 750px) {
+    .eventsGrid {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+    }
+}
+
+.eventCard {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.eventTitle {
+    font-size: 1.2rem;
+    color: #0047ab;
+    margin-bottom: 10px;
+}
+
+.eventDate,
+.eventLocation {
+    margin-bottom: 5px;
+}
+
+.eventLink {
+    margin-top: 10px;
+}

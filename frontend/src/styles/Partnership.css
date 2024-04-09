@@ -1,0 +1,79 @@
+.pageTitle {
+    margin-bottom: 2rem;
+    color: #0047ab;
+    font-weight: bold;
+    text-align: center;
+}
+
+.connectionContainer,.partnershipContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2vw;
+    margin-bottom: 10vh;
+}
+
+.contactContainer,.addressContainer,.emailContainer{
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1vh 1vw;
+}
+
+.contactContainer .contactTitle,.addressTitle,.emailTitle{
+    color: #0047ab;
+}
+
+.phoneIcon,.emailIcon,.addressIcon{
+    font-size: 2.5rem !important;
+    margin-right: 1.5vw;
+    color: #0047ab;
+}
+
+.partnershipDetailsContainer{
+    display: flex;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2vh 2vw;
+}
+
+.partnerName{
+    color: #0047ab;
+}
+
+
+.partnershipDetailsContainer>img{
+    width: 10vw;
+    height: 20vh;
+    object-fit: fill;
+    margin-right: 2vw;
+}
+
+.partnershipForm{
+    position: relative;
+    padding: 10vh 5vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
+    margin-bottom: 8vh;
+}
+
+.partnershipForm>h2{
+    font-size: 2.5rem;
+    margin-bottom: 4vh;
+}
+
+.nameInput,.emailInput,.contactInput,textarea{
+    padding: 1vh 1vw;
+    margin-bottom: 4vh;
+    outline: none;
+    resize: none;
+}
+
+.partnershipForm>.submitButton{
+    border: none;
+    max-width: 30%;
+    padding: 0.5vh 0;
+    background-color: #0047ab;
+    color: white;
+}

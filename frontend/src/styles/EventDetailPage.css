@@ -1,0 +1,71 @@
+.eventDetailPage {
+    padding: 20px;
+}
+
+.eventDetailPage .eventTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+.eventDetailPage .eventDate{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+.eventDetailPage .eventLocation {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+.eventDetailPage .eventDescription {
+    margin-bottom: 3vh;
+}
+
+.registerButton{
+    border: none;
+    height: fit-content;
+    padding: 1vh 4vw;
+    background-color: #0047ab;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.formContainer{
+    position: relative;
+    padding: 10vh 5vw;
+    display: flex;
+    flex-direction: column;
+    max-width: 70vw;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
+}
+
+.formContainer>h2{
+    font-size: 2.5rem;
+    margin-bottom: 4vh;
+}
+
+.nameInput,.emailInput,.contactInput{
+    padding: 1vh 1vw;
+    margin-bottom: 4vh;
+    outline: none;
+}
+
+.formContainer>.submitButton{
+    border: none;
+    max-width: 30%;
+    padding: 0.5vh 0;
+    background-color: #0047ab;
+    color: white;
+}
+
+.formContainer>.closeButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import plasticOceanPicture from '../assets/images/plastic_ocean.webp'; 
 import '../styles/IssueCard.css';
 
 const IssueCard = ({issue}) => {
