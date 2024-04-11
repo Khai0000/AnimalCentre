@@ -7,7 +7,8 @@ $routes = array(
     '/server.php' => 'home',
     '/server.php/news' => 'getNews',
     '/server.php/register_events' => 'registerEvents',
-    '/server.php/collaborations'=>"collaboration"
+    '/server.php/collaborations' => "collaboration",
+    '/server.php/feedbacks' => "feedback"
 );
 
 $request_uri = $_SERVER['REQUEST_URI'];
@@ -18,12 +19,16 @@ switch ($action) {
             include "news.php";
             break;
         }
-    case "registerEvents":{
-        include "eventRegister.php";
-        break;
-    }
-    case "collaboration":{
-        include "collaboration.php";
-        break;
-    }
+    case "registerEvents": {
+            include "eventRegister.php";
+            break;
+        }
+    case "collaboration": {
+            include "collaboration.php";
+            break;
+        }
+    case "feedback": {
+            include "feedback.php";
+            break;
+        }
 }

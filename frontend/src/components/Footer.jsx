@@ -3,6 +3,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { useState } from "react";
+import axios from "axios";
 
 function Footer() {
   const [message, setMessage] = useState("");
@@ -13,7 +14,7 @@ function Footer() {
     else setSelectedRating(rating);
   };
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
 
     if (!message) {
@@ -26,13 +27,28 @@ function Footer() {
       return;
     }
 
-    const formDataMessage = `Form submitted: Feedback: ${message}, Rating: ${selectedRating}`;
-    alert(
-      `${formDataMessage}\n\nThank you for submitting the form! We will contact you soon!`
-    );
+    const formData = {
+      message: message,
+      'rating': selectedRating,
+    };
 
-    setMessage("");
-    setSelectedRating(null);
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/server.php/feedbacks",
+        formData
+      );
+      if (response.status === 200) {
+        const message = response.data.message;
+        alert(message);
+        setMessage("");
+        setSelectedRating(null);
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form. Please try again later.");
+    }
   };
 
   return (
