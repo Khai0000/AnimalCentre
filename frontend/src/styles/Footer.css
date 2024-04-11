@@ -68,39 +68,29 @@ footer .ratingButtonContainer button {
 
 
 
-/* Styling for button 1 */
 footer .ratingButtonContainer button:nth-child(1) {
     background-color: #252D37;
     color: white;
-    /* Adjust text color as needed */
 }
 
-/* Styling for button 2 */
 footer .ratingButtonContainer button:nth-child(2) {
     background-color: #252D37;
     color: white;
-    /* Adjust text color as needed */
 }
 
-/* Styling for button 3 */
 footer .ratingButtonContainer button:nth-child(3) {
     background-color: #252D37;
     color: white;
-    /* Adjust text color as needed */
 }
 
-/* Styling for button 4 */
 footer .ratingButtonContainer button:nth-child(4) {
     background-color: #0a336d;
     color: white;
-    /* Adjust text color as needed */
 }
 
-/* Styling for button 5 */
 footer .ratingButtonContainer button:nth-child(5) {
     background-color: #0047ab;
     color: #fff;
-    /* Adjust text color as needed */
 }
 
 

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import eventsData from "../data/eventsData";
 import "../styles/EventDetailPage.css";
 import CloseIcon from "@mui/icons-material/Close";
+import axios from "axios";
 
 const EventDetailPage = () => {
   const { id } = useParams();
@@ -13,7 +14,7 @@ const EventDetailPage = () => {
   const [contactNumber, setContactNumber] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
 
     if (!name || !contactNumber || !email) {
@@ -21,14 +22,34 @@ const EventDetailPage = () => {
       return;
     }
 
-    const formDataMessage = `Form submitted:\nName: ${name}\nContact Number: ${contactNumber}\nEmail: ${email}`;
-    alert(
-      `${formDataMessage}\n\nThank you for submitting the form! We will contact you soon!`
-    );
-    setName("");
-    setContactNumber("");
-    setEmail("");
-    setShowPopup(false);
+    const formData = {
+      "name": name,
+      "contactNumber": contactNumber,
+      "email": email,
+    };
+
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/server.php/register_events",
+        formData,
+      );
+
+      
+      if (response.status === 200) {
+        const message = response.data.message;
+        alert(message);
+        setName("");
+        setContactNumber("");
+        setEmail("");
+        setShowPopup(false);
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form. Please try again later.");
+    }
   };
 
   return !showPopup ? (

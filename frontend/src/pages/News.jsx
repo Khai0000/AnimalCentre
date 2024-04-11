@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/News.css";
+import axios from "axios";
 import CircularProgress from "@mui/material/CircularProgress";
 
 const News = () => {
@@ -10,11 +11,11 @@ const News = () => {
     const fetchNews = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(
-          `https://newsapi.org/v2/everything?q="plastic%20pollution"&language=en&sortBy=popularity&apiKey=f56be75d496143a2b2aad7815515c305`
+        const response = await axios.get(
+          `http://localhost:8000/server.php/news`
         );
-        const data = await response.json();
-        const filteredArticles = data.articles.filter(
+
+        const filteredArticles = response.data.articles.filter(
           (article) =>
             article.source.name !== "[Removed]" && article.source.name !== null
         );

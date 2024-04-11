@@ -6,6 +6,7 @@ import DomainIcon from "@mui/icons-material/Domain";
 import oceanCleanup from "../assets/images/ocean_cleanup.jpg";
 import coralreefAlliance from "../assets/images/coralreef_alliance.webp";
 import oceanConservancy from "../assets/images/ocean_conservancy.svg";
+import axios from "axios";
 
 const Partnership = () => {
   const [name, setName] = useState("");
@@ -13,24 +14,42 @@ const Partnership = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
 
     if (!name || !contactNumber || !email || !message) {
-        alert("Please fill in all fields");
-        return;
+      alert("Please fill in all fields");
+      return;
     }
 
-    const formDataMessage = `Form submitted:\nName: ${name}\nContact Number: ${contactNumber}\nEmail: ${email}\nMessage: ${message}`;
-    alert(
-        `${formDataMessage}\n\nThank you for submitting the form! We will contact you soon!`
-    );
-    setName("");
-    setContactNumber("");
-    setEmail("");
-    setMessage("");
-};
+    const formData = {
+      name:name,
+      contactNumber:contactNumber,
+      email:email,
+      message:message,
+    };
 
+    try {
+      const response = await axios.post(
+        `http://localhost:8000/server.php/collaborations`,
+        formData
+      );
+      if (response.status === 200) {
+        const message = response.data.message;
+        alert(message);
+        setName("");
+        setContactNumber("");
+        setEmail("");
+        setMessage("");
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form. Please try again later.");
+    }
+
+  };
 
   return (
     <div className="partnershipPage container p-3">
@@ -148,7 +167,7 @@ const Partnership = () => {
           rows={5}
           placeholder="Leave your message here!"
           value={message}
-          onChange={(e)=>setMessage(e.target.value)}
+          onChange={(e) => setMessage(e.target.value)}
           required
         />
         <button className="submitButton" type="submit">
